@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>           <!-- Dialect used for particular database engine in particular version -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>         <!-- Class from Driver-Connector Library (added in Maven) for database driver - with full package path -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/company_db</property> <!-- connection string - points to place where available database is -->
+        <property name="hibernate.connection.username">company_admin</property>                     <!-- name of user used for database connection (need to have proper privileges -->
+        <property name="hibernate.connection.password">Qwerty1234</property>                       <!-- pass for above user -->
+
+        <property name="hibernate.current_session_context_class">thread</property>                  <!-- scope of Hibernate session context -->
+        <property name="hbm2ddl.auto">update</property>                                             <!-- WARN quite important setting - for more see presentation page 24 -->
+        <property name="hibernate.show_sql">true</property>                                        <!-- boolean setting - if hibernate should show SQL statements in output window (console by defualt) -->
+        <property name="hibernate.connection.autoReconnect">true</property>                         <!-- boolean setting - if hibernate should try to auto reconnect if connection with database is lost -->
+
+        <!-- list will all our table mappings -->
+
+    </session-factory>
+
+</hibernate-configuration>
