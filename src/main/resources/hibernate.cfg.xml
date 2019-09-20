@@ -16,7 +16,12 @@
         <property name="hibernate.connection.autoReconnect">true</property>                         <!-- boolean setting - if hibernate should try to auto reconnect if connection with database is lost -->
 
         <!-- list will all our table mappings -->
-
+        <mapping class="pojo.Customer" />
+        <mapping class="pojo.CustomerVisit" />
+        <mapping class="pojo.Deal" />
+        <mapping class="pojo.Location" />
+        <mapping class="pojo.SalesPerson" />
+        <mapping class="pojo.Vehicle" />
     </session-factory>
 
 </hibernate-configuration>
